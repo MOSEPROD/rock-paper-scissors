@@ -24,7 +24,7 @@ let computer_choice = getComputerChoice();
 console.log(computer_choice);
 
 function getHumanChoice(){
-    let user_choice = parseInt(prompt("Your choices:\n 1. Rock \n 2. Paper \n 3. Rock"));
+    let user_choice = parseInt(prompt("Your choices:\n 1. Rock \n 2. Paper \n 3. Scissors"));
 
     if (user_choice == 1){
         return "Rock";
@@ -44,3 +44,38 @@ console.log(human_choice);
 
 let human_score = 0;
 let computer_score = 0;
+
+function playRound(human_choice, computer_choice){
+    if(human_choice == computer_choice){
+        console.log("Tie Game. " + human_choice +" is same to "+ computer_choice);
+    }
+    else if(human_choice == "Rock" && computer_choice == "Paper"){
+        computer_score++;
+        console.log("You lost. "+computer_choice+"wraps"+human_choice);
+    }
+    else if(human_choice == "Rock" && computer_choice == "Scissors"){
+        human_score++;
+        console.log("You won. "+human_choice+" crushes "+computer_choice);
+    }
+    else if (human_choice == "Paper" && computer_choice == "Rock"){
+        human_score++;
+        console.log("You won. "+human_choice+" wraps "+computer_choice);
+    }
+    else if (human_choice == "Paper" && computer_choice == "Scissors"){
+        computer_score++;
+        console.log("You lost. "+computer_choice+" cuts "+human_choice);
+    }
+    else if (human_choice == "Scissors" && computer_choice == "Rock"){
+        computer_score++;
+        console.log("You lost. "+computer_choice+" crushes "+human_choice);
+    }
+    else if (human_choice == "Scissors" && computer_choice == "Paper"){
+        human_score++;
+        console.log("You won. "+human_choice+" cuts "+computer_choice);
+    }
+    else{
+        console.log("Invalid options");
+    }
+}
+
+console.log(playRound(human_choice, computer_choice));
