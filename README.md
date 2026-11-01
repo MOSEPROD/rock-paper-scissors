@@ -2,3 +2,4 @@
 This is the solution to the Odin project: rock paper scissors
 Lesson leant:
 - Loaded an external Javascript 
+- Used a switch statement to capture computer choice
