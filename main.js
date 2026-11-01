@@ -1,4 +1,4 @@
-console.log("Hello, World");
+console.log("Rock, Paper, Scissors Game.");
 
 function getComputerChoice(){
     let random_number = Math.floor(Math.random() * 3);
@@ -20,8 +20,6 @@ function getComputerChoice(){
     }
 }
 
-let computer_choice = getComputerChoice();
-console.log(computer_choice);
 
 function getHumanChoice(){
     let user_choice = parseInt(prompt("Your choices:\n 1. Rock \n 2. Paper \n 3. Scissors"));
@@ -39,8 +37,6 @@ function getHumanChoice(){
         return "Invalid Choice";
     }
 }
-let human_choice = getHumanChoice();
-console.log(human_choice);
 
 let human_score = 0;
 let computer_score = 0;
@@ -51,7 +47,7 @@ function playRound(human_choice, computer_choice){
     }
     else if(human_choice == "Rock" && computer_choice == "Paper"){
         computer_score++;
-        console.log("You lost. "+computer_choice+"wraps"+human_choice);
+        console.log("You lost. "+computer_choice+" wraps "+human_choice);
     }
     else if(human_choice == "Rock" && computer_choice == "Scissors"){
         human_score++;
@@ -78,4 +74,12 @@ function playRound(human_choice, computer_choice){
     }
 }
 
-console.log(playRound(human_choice, computer_choice));
+
+function playGame(){
+    for (let i = 0; i <= 5; i++) {
+        playRound(getHumanChoice(), getComputerChoice());    
+    }
+    console.log("\n Computer Score: "+computer_score+" \n Your Score: "+human_score);
+}
+
+playGame();
