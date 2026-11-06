@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 255, 255);
+}
+
+.header{
+    text-align: center;
+    padding: 20px;
+    font-size: 70px;
+}
+
+.round-button{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+
+}
+
+button{
+    width: 300px;
+    padding: 30px;
+    font-size: 50px;
+    margin-top: 30px;
+    border: 2px solid #000;
+    border-radius: 10px;
+}
+
+.display_result{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 30px;
+    font-size: 30px;
+}

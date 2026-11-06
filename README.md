@@ -6,3 +6,4 @@ Lesson leant:
 - Collected user input using prompt
 - Convert a string to integer
 - Used buttons to capture user inputs
+- Created the GUI for the game
