@@ -21,8 +21,7 @@ function getComputerChoice(){
 }
 
 
-function getHumanChoice(){
-    let user_choice = parseInt(prompt("Your choices:\n 1. Rock \n 2. Paper \n 3. Scissors"));
+function getHumanChoice(user_choice){
 
     if (user_choice == 1){
         return "Rock";
@@ -74,7 +73,28 @@ function playRound(human_choice, computer_choice){
     }
 }
 
+let rock_btn = document.querySelector(".rock");
+let paper_btn = document.querySelector(".paper");
+let scissors_btn = document.querySelector(".scissors");
 
+rock_btn.addEventListener("click", () => {
+    console.log("Rock");
+    playRound(getHumanChoice(1), getComputerChoice());
+});
+
+paper_btn.addEventListener("click", () => {
+    console.log("Paper");
+    playRound(getHumanChoice(2), getComputerChoice());
+    
+});
+
+scissors_btn.addEventListener("click", () => {
+    console.log("Scissors");
+    playRound(getHumanChoice(3), getComputerChoice());
+    
+});
+
+/*
 function playGame(){
     for (let i = 0; i <= 5; i++) {
         playRound(getHumanChoice(), getComputerChoice());    
@@ -83,3 +103,5 @@ function playGame(){
 }
 
 playGame();
+
+*/
